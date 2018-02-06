@@ -18,11 +18,21 @@
             <artifactId>stamp-nlp-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.ixeption.ml.stamp</groupId>
+            <artifactId>stamp-nlp-translate-google</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.ixeption.ml.stamp</groupId>
+                    <artifactId>>stamp-nlp-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>1.5.10.RELEASE</version>
+            <version>${springboot.version}</version>
         </dependency>
     </dependencies>
 
@@ -35,21 +45,18 @@
         </plugins>
     </build>
 
-
     <repositories>
         <repository>
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>spring-releases</id>
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
-
-
-
 
 </project>
