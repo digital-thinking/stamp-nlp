@@ -1,4 +1,4 @@
-package com.ixeption.ml.stamp.pipeline;
+package com.ixeption.ml.stamp.api;
 
 import com.ixeption.ml.stamp.preprocessing.TextTransform;
 
